@@ -1,0 +1,17 @@
+.btn {
+  &.btn-main {
+    padding: 1rem;
+    @include font(1.125rem, 700, 1.223);
+    color: $black;
+    border-radius: 1.25rem;
+    background-color: $yellow;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: $yellow-hover;
+    }
+  }
+}

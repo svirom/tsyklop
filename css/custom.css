@@ -64,10 +64,24 @@ a:focus {
   -moz-appearance: none;
 }
 
+:root {
+  --bs-gutter-x: 0.9375rem;
+}
+
+.row {
+  --bs-gutter-x: 1.875rem;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1140px;
+  }
+}
+
 body {
   color: #0C0C0C;
   font-family: "Inter", sans-serif;
-  line-height: 1.21;
+  line-height: 1.2;
 }
 
 h1, h2, h3 {
@@ -78,7 +92,7 @@ h1, h2, h3 {
 h1 {
   margin-bottom: 1.25rem;
   font-size: 4.375rem;
-  line-height: 1.14;
+  line-height: 1.143;
 }
 
 h2 {
@@ -96,7 +110,17 @@ h3 {
 p {
   margin-bottom: 0.625rem;
   font-size: 1.125rem;
-  line-height: 1.21;
+}
+
+a {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #0C0C0C;
+}
+
+a:hover {
+  color: #0C0C0C;
 }
 
 @media screen and (max-width: 991px) {
@@ -125,6 +149,25 @@ p {
   }
 }
 
+.btn.btn-main {
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.223;
+  color: #0C0C0C;
+  border-radius: 1.25rem;
+  background-color: #F6E71D;
+}
+
+.btn.btn-main:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.btn-main:hover {
+  background-color: #E8D305;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,9 +185,77 @@ p {
           flex: 1 0 auto;
 }
 
-.header, .footer {
+.footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+}
+
+.header-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.0625rem;
+}
+
+.header-navbar .btn-main {
+  width: 271px;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.875rem;
+}
+
+.nav-lang li {
+  position: relative;
+}
+
+.nav-lang li + li {
+  margin-left: 1rem;
+}
+
+.nav-lang li.active a {
+  font-weight: 700;
+}
+
+.nav-lang li.active::after {
+  position: absolute;
+  content: '';
+  bottom: -0.9375rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #F6E71D;
+}
+
+.hero-main {
+  padding-top: 10.625rem;
+  text-align: center;
+}
+
+.hero-main .hero-subtitle {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
 }
 /*# sourceMappingURL=custom.css.map */
