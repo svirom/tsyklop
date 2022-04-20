@@ -15,3 +15,249 @@
     }
   }
 }
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  filter: blur(112px);
+
+  &--grey {
+    background-color: $light-grey;
+  }
+
+  &--yellow {
+    background-color: $yellow;
+  }
+
+  &--400 {
+    width: 400px;
+    height: 400px;
+  }
+
+  &--564 {
+    width: 564px;
+    height: 564px;
+  }
+
+  &--620 {
+    width: 620px;
+    height: 620px;
+  }
+
+  &--700 {
+    width: 700px;
+    height: 700px;
+  }
+
+  &.circle-1 {
+    right: calc(50% + 115px);
+    top: -140px;
+  }
+
+  &.circle-2 {
+    left: calc(50% + 98px);
+    top: 107px;
+  }
+
+  &.circle-3 {
+    right: calc(50% + 96px);
+    top: 548px;
+  }
+
+  &.circle-4 {
+    right: calc(50% + 232px);
+    top: 1587px;
+  }
+
+  &.circle-5 {
+    left: calc(50% + 178px);
+    top: 2377px;
+  }
+}
+
+.top-icon {
+  position: absolute;
+  border: 1px solid $yellow;
+  border-radius: 50%;
+  background-color: $white;
+
+  &--81 {
+    width: 81px;
+    height: 81px;
+  }
+
+  &--132 {
+    width: 132px;
+    height: 132px;
+  }
+
+  &.top-icon-1 {
+    left: calc(50% - 700px);
+    top: 173px;
+    background: $white url('../img/icons/icon-package.png') center no-repeat;
+  }
+
+  &.top-icon-2 {
+    right: calc(50% - 684px);
+    top: 139px;
+    background: $white url('../img/icons/icon-cocktail-glass.png') center no-repeat;
+  }
+
+  &.top-icon-3 {
+    left: calc(50% - 606px);
+    top: 519px;
+    background: $white url('../img/icons/icon-thumbs-up-2.png') center no-repeat;
+  }
+
+  &.top-icon-4 {
+    right: calc(50% - 676px);
+    top: 449px;
+    background: $white url('../img/icons/icon-credit-card.png') center no-repeat;
+  }
+}
+
+.list-bullet {
+  list-style: initial;
+  padding-left: 1.625rem;
+}
+
+@include until($xxl) {
+  .top-icon {  
+    &.top-icon-1 {
+      left: calc(50% - 586px);
+      top: 138px;
+    }
+  
+    &.top-icon-2 {
+      right: calc(50% - 582px);
+      top: 108px;
+    }
+  
+    &.top-icon-3 {
+      left: calc(50% - 564px);
+    }
+  
+    &.top-icon-4 {
+      right: calc(50% - 562px);
+    }
+  }
+}
+
+@include until($xl) {
+  .top-icon {  
+    &.top-icon-1 {
+      left: calc(50% - 496px);
+      top: 332px;
+    }
+  
+    &.top-icon-2 {
+      right: calc(50% - 486px);
+      top: 362px;
+    }
+  
+    &.top-icon-3 {
+      left: calc(50% - 416px);
+      top: 492px;
+    }
+  
+    &.top-icon-4 {
+      right: calc(50% - 394px);
+      top: 562px;
+    }
+  }
+}
+
+@include until($lg) {
+  .circle {
+    filter: blur(72px);
+
+    &--400 {
+      width: 267px;
+      height: 267px;
+    }
+  
+    &--564 {
+      width: 376px;
+      height: 376px;
+    }
+  
+    &--620 {
+      width: 413px;
+      height: 413px;
+    }
+  
+    &--700 {
+      width: 467px;
+      height: 467px;
+    }
+  
+    &.circle-1 {
+      right: calc(50% + 102px);
+      top: -74px;
+    }
+  
+    &.circle-2 {
+      left: calc(50% + 56px);
+      top: 52px;
+    }
+  
+    &.circle-3 {
+      right: calc(50% + 78px);
+      top: 332px;
+    }
+  
+    &.circle-4 {
+      right: calc(50% + 172px);
+      top: 1100px;
+    }
+  
+    &.circle-5 {
+      left: calc(50% + 190px);
+      top: 1630px;
+    }
+  }
+
+  .top-icon {  
+    &--81 {
+      width: 50px;
+      height: 50px;
+    }
+  
+    &--132 {
+      width: 80px;
+      height: 80px;
+    }
+
+    &.top-icon-1 {
+      left: calc(50% - 376px);
+      top: 280px;
+      background-size: 65%;
+    }
+  
+    &.top-icon-2 {
+      right: calc(50% - 328px);
+      top: 336px;
+      background-size: 80%;
+    }
+  
+    &.top-icon-3 {
+      left: calc(50% - 296px);
+      top: 374px;
+      background-size: 64%;
+      background-position: left 10px top 13px;
+    }
+  
+    &.top-icon-4 {
+      right: calc(50% - 286px);
+      top: 504px;
+      background-size: 54%;
+    }
+  }
+}
+
+@include until($md) {
+  .top-icon {
+    display: none;
+  }
+}

@@ -113,3 +113,10 @@ a:focus {
     max-width: 1140px;
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
