@@ -1,18 +1,30 @@
 .btn {
+  color: $black;
+  @include font(1.125rem, 700, 1.223);
+  border: 0;
+
   &.btn-main {
-    padding: 1rem;
-    @include font(1.125rem, 700, 1.223);
-    color: $black;
+    padding: 1.0625rem;
     border-radius: 1.25rem;
     background-color: $yellow;
-
-    &:focus {
-      box-shadow: none;
-    }
 
     &:hover {
       background-color: $yellow-hover;
     }
+  }
+
+  &.btn-lang {
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.1875;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $black;
   }
 }
 
@@ -257,6 +269,27 @@
 }
 
 @include until($md) {
+  .circle {
+    filter: blur(112px);
+  
+    &--700 {
+      width: 400px;
+      height: 400px;
+    }
+  
+    &.circle-1,
+    &.circle-3,
+    &.circle-4,
+    &.circle-5 {
+      display: none;
+    }
+  
+    &.circle-2 {
+      left: calc(50% - 122px);
+      top: 38px;
+    }
+  }
+
   .top-icon {
     display: none;
   }

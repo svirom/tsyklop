@@ -89,6 +89,48 @@
 	}
 }
 
+.nav-lang-mobile {
+	display: none;
+	margin-right: 0.9375rem;
+
+	.btn-lang {
+		position: relative;
+		padding-left: 0.875rem;
+
+		&::after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 0.625rem;
+			height: 0.625rem;
+			border-radius: 50%;
+			background-color: $yellow;
+		}
+	}
+
+	.dropdown-menu {
+		min-width: auto;
+		// padding: 0.25rem 0;
+
+		li {
+			margin-bottom: 0;
+		}
+	}
+
+	.dropdown-item {
+		padding: 0.25rem 0.5rem;
+		color: $black;
+		font-size: 1rem;
+
+		&.active {
+			font-weight: 700;
+			background-color: transparent;
+		}
+	}
+}
+
 // top promo
 .top-promo {
 	position: relative;
@@ -131,6 +173,8 @@
 	align-items: center;
 	width: 7.5rem;
 	height: 7.5rem;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 1.125rem;
 	border: 2px solid $yellow;
 	border-radius: 50%;
@@ -191,6 +235,7 @@
 	}
 
 	.list-item {
+		margin-left: 0;
 		margin-bottom: 2rem;
 		background-color: transparent;
 	}
@@ -227,6 +272,66 @@
 		border-radius: 50%;
 		background-color: $black;
 	}
+}
+
+// applying
+.applying {
+	text-align: center;
+}
+
+.applying-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 12.5rem;
+	border: 2px solid $light-grey;
+	border-radius: 1.25rem;
+}
+
+.applying-services {
+	.row {
+		--bs-gutter-x: 0.625rem;
+	}
+
+	.col {
+		margin-bottom: 1.25rem;
+		
+		&.services-azk {
+			flex-basis: 23%;
+		}
+
+		&.services-courier {
+			flex-basis: 30%;
+		}
+
+		&.services-restaurants {
+			flex-basis: 30%;
+		}
+
+		&.services-bars {
+			flex-basis: 17%;
+		}
+
+		&.services-cafe {
+			flex-basis: 12%;
+		}
+
+		&.services-beauty {
+			flex-basis: 44%;
+		}
+
+		&.services-services {
+			flex-basis: 44%;
+		}
+	}
+}
+
+.services-card {
+	padding: 1.125rem;
+	font-size: 1.125rem;
+	line-height: 1.223;
+	border: 2px solid $light-grey;
+	border-radius: 1.25rem;
 }
 
 @include until($xl) {
@@ -296,5 +401,138 @@
 
 	.advantage-card {
 		min-height: auto;
+	}
+}
+
+@include until($md) {
+	.header {
+		padding-bottom: 3.75rem;
+		background: none;
+	}
+
+	.nav-lang {
+		display: none;
+	}
+
+	.nav-lang-mobile {
+		display: block;
+	}
+
+	.header-navbar {
+		align-items: flex-start;
+		margin-top: 0.9375rem;
+
+		.btn-main {
+			width: 123px;
+			padding: 0.75rem 0.625rem 0.8125rem;
+			font-size: 1rem;
+			line-height: 1.1875;
+			border-radius: 0.625rem;
+		}
+	}
+
+	.top-main {
+		padding-top: 2.5rem;
+
+		.top-subtitle {
+			font-size: 1.125rem;
+			line-height: 1.223;
+		}
+	}
+
+	.top-promo {
+		padding-top: 0;
+		padding-bottom: 3.75rem;
+
+		.top-promo__subtitle {
+			margin-bottom: 2.5rem;
+		}
+
+		&__content {
+			h2 {
+				margin-bottom: 2.5rem;
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+			}
+		}
+	}
+
+	.promo-card {
+		margin-bottom: 3.75rem;
+		padding: 2.25rem 1rem;
+
+		.list-item {
+			margin: 0 auto 1.25rem;
+		}
+
+		&__content {
+			padding-bottom: 1.25rem;
+
+			h2 {
+				text-align: center;
+			}
+		}
+
+		&__img {
+			width: 100%;
+			max-width: 18.125rem;
+			background: radial-gradient(circle, #F6E71D 0, #F6E71D 145px, transparent 146px);
+
+			img {
+				width: 172px;
+			}
+		}
+	}
+
+	.advantages {
+		.advantages-title {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.advantage-card {
+		text-align: center;
+
+		&__img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+@include until($sm) {
+	.promo-list {
+		justify-content: space-around;
+
+		li {
+			width: 5.625rem;
+
+			+ li {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.list-item {
+		width: 3.75rem;
+		height: 3.75rem;
+
+		&::before {
+			width: 5.75rem;
+			height: 5.75rem;
+			background: radial-gradient(circle, transparent 0, transparent 1.875rem, rgba($yellow, 0.1) 1.9375rem, rgba($yellow, 0.1) 2.75rem);
+		}
+
+		&--tips, &--menu {
+			img {
+				width: 55%;
+			}
+		}
+
+		&--reviews {
+			img {
+				width: 50%;
+			}
+		}
 	}
 }

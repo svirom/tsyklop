@@ -150,27 +150,41 @@ a:hover {
     font-size: 1.25rem;
     line-height: 1.1;
   }
-  p {
+  p, li {
     font-size: 1rem;
   }
 }
 
-.btn.btn-main {
-  padding: 1rem;
+.btn {
+  color: #0C0C0C;
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.223;
-  color: #0C0C0C;
+  border: 0;
+}
+
+.btn.btn-main {
+  padding: 1.0625rem;
   border-radius: 1.25rem;
   background-color: #F6E71D;
 }
 
-.btn.btn-main:focus {
+.btn.btn-main:hover {
+  background-color: #E8D305;
+}
+
+.btn.btn-lang {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.1875;
+}
+
+.btn:focus {
   box-shadow: none;
 }
 
-.btn.btn-main:hover {
-  background-color: #E8D305;
+.btn:hover {
+  color: #0C0C0C;
 }
 
 .circle {
@@ -389,6 +403,21 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
+  .circle {
+    -webkit-filter: blur(112px);
+            filter: blur(112px);
+  }
+  .circle--700 {
+    width: 400px;
+    height: 400px;
+  }
+  .circle.circle-1, .circle.circle-3, .circle.circle-4, .circle.circle-5 {
+    display: none;
+  }
+  .circle.circle-2 {
+    left: calc(50% - 122px);
+    top: 38px;
+  }
   .top-icon {
     display: none;
   }
@@ -489,6 +518,48 @@ a:hover {
   background-color: #F6E71D;
 }
 
+.nav-lang-mobile {
+  display: none;
+  margin-right: 0.9375rem;
+}
+
+.nav-lang-mobile .btn-lang {
+  position: relative;
+  padding-left: 0.875rem;
+}
+
+.nav-lang-mobile .btn-lang::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #F6E71D;
+}
+
+.nav-lang-mobile .dropdown-menu {
+  min-width: auto;
+}
+
+.nav-lang-mobile .dropdown-menu li {
+  margin-bottom: 0;
+}
+
+.nav-lang-mobile .dropdown-item {
+  padding: 0.25rem 0.5rem;
+  color: #0C0C0C;
+  font-size: 1rem;
+}
+
+.nav-lang-mobile .dropdown-item.active {
+  font-weight: 700;
+  background-color: transparent;
+}
+
 .top-promo {
   position: relative;
   padding-top: 1.25rem;
@@ -531,6 +602,8 @@ a:hover {
       align-items: center;
   width: 7.5rem;
   height: 7.5rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.125rem;
   border: 2px solid #F6E71D;
   border-radius: 50%;
@@ -591,6 +664,7 @@ a:hover {
 }
 
 .promo-card .list-item {
+  margin-left: 0;
   margin-bottom: 2rem;
   background-color: transparent;
 }
@@ -624,6 +698,73 @@ a:hover {
   margin-bottom: 0.625rem;
   border-radius: 50%;
   background-color: #0C0C0C;
+}
+
+.applying {
+  text-align: center;
+}
+
+.applying-card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 12.5rem;
+  border: 2px solid #D8E4FF;
+  border-radius: 1.25rem;
+}
+
+.applying-services .row {
+  --bs-gutter-x: 0.625rem;
+}
+
+.applying-services .col {
+  margin-bottom: 1.25rem;
+}
+
+.applying-services .col.services-azk {
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+}
+
+.applying-services .col.services-courier {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.applying-services .col.services-restaurants {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.applying-services .col.services-bars {
+  -ms-flex-preferred-size: 17%;
+      flex-basis: 17%;
+}
+
+.applying-services .col.services-cafe {
+  -ms-flex-preferred-size: 12%;
+      flex-basis: 12%;
+}
+
+.applying-services .col.services-beauty {
+  -ms-flex-preferred-size: 44%;
+      flex-basis: 44%;
+}
+
+.applying-services .col.services-services {
+  -ms-flex-preferred-size: 44%;
+      flex-basis: 44%;
+}
+
+.services-card {
+  padding: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.223;
+  border: 2px solid #D8E4FF;
+  border-radius: 1.25rem;
 }
 
 @media screen and (max-width: 1199px) {
@@ -675,6 +816,109 @@ a:hover {
   }
   .advantage-card {
     min-height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-bottom: 3.75rem;
+    background: none;
+  }
+  .nav-lang {
+    display: none;
+  }
+  .nav-lang-mobile {
+    display: block;
+  }
+  .header-navbar {
+    -ms-flex-align: start;
+        align-items: flex-start;
+    margin-top: 0.9375rem;
+  }
+  .header-navbar .btn-main {
+    width: 123px;
+    padding: 0.75rem 0.625rem 0.8125rem;
+    font-size: 1rem;
+    line-height: 1.1875;
+    border-radius: 0.625rem;
+  }
+  .top-main {
+    padding-top: 2.5rem;
+  }
+  .top-main .top-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.223;
+  }
+  .top-promo {
+    padding-top: 0;
+    padding-bottom: 3.75rem;
+  }
+  .top-promo .top-promo__subtitle {
+    margin-bottom: 2.5rem;
+  }
+  .top-promo__content h2 {
+    margin-bottom: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .promo-card {
+    margin-bottom: 3.75rem;
+    padding: 2.25rem 1rem;
+  }
+  .promo-card .list-item {
+    margin: 0 auto 1.25rem;
+  }
+  .promo-card__content {
+    padding-bottom: 1.25rem;
+  }
+  .promo-card__content h2 {
+    text-align: center;
+  }
+  .promo-card__img {
+    width: 100%;
+    max-width: 18.125rem;
+    background: radial-gradient(circle, #F6E71D 0, #F6E71D 145px, transparent 146px);
+  }
+  .promo-card__img img {
+    width: 172px;
+  }
+  .advantages .advantages-title {
+    margin-bottom: 1.5rem;
+  }
+  .advantage-card {
+    text-align: center;
+  }
+  .advantage-card__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .promo-list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .promo-list li {
+    width: 5.625rem;
+  }
+  .promo-list li + li {
+    margin-left: 0;
+  }
+  .list-item {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .list-item::before {
+    width: 5.75rem;
+    height: 5.75rem;
+    background: radial-gradient(circle, transparent 0, transparent 1.875rem, rgba(246, 231, 29, 0.1) 1.9375rem, rgba(246, 231, 29, 0.1) 2.75rem);
+  }
+  .list-item--tips img, .list-item--menu img {
+    width: 55%;
+  }
+  .list-item--reviews img {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=custom.css.map */
