@@ -187,6 +187,32 @@ a:hover {
   color: #0C0C0C;
 }
 
+.form-control {
+  padding: 1.125rem 0.75rem;
+  font-size: 1.25rem;
+  color: #0C0C0C;
+  text-align: center;
+  border: 3px solid #D8E4FF;
+  border-radius: 1.25rem;
+}
+
+.form-control:focus {
+  color: #0C0C0C;
+  border-color: #D8E4FF;
+  box-shadow: none;
+}
+
+.form-control.is-invalid {
+  border-color: #ED6B86;
+  background-image: none;
+}
+
+.form-control ~ .invalid-feedback {
+  margin-top: 0.625rem;
+  color: #ED6B86;
+  font-size: 1.25rem;
+}
+
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -432,8 +458,12 @@ a:hover {
 }
 
 .main {
+  position: relative;
   -ms-flex: 1 0 auto;
       flex: 1 0 auto;
+  border-bottom-left-radius: 7.5rem;
+  border-bottom-right-radius: 7.5rem;
+  background-color: #FFFFFF;
 }
 
 .footer {
@@ -701,10 +731,41 @@ a:hover {
 }
 
 .applying {
+  padding-top: 3.75rem;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
+.applying .applying-subtitle {
+  margin-bottom: 4.125rem;
+  font-size: 1.5rem;
+}
+
+.applying .applying-icon {
+  position: absolute;
+}
+
+.applying .applying-icon--ukrnafta {
+  top: -1.875rem;
+  left: 1.125rem;
+}
+
+.applying .applying-icon--beauty {
+  bottom: -3.5rem;
+  right: 5.625rem;
+}
+
+.applying .applying-icon--services {
+  top: -1.375rem;
+  right: 3.5rem;
+}
+
+.applying-current {
+  padding-bottom: 2.5rem;
+}
+
 .applying-card {
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -721,42 +782,61 @@ a:hover {
 }
 
 .applying-services .col {
+  position: relative;
   margin-bottom: 1.25rem;
 }
 
 .applying-services .col.services-azk {
   -ms-flex-preferred-size: 23%;
       flex-basis: 23%;
+  -ms-flex-order: 1;
+      order: 1;
 }
 
 .applying-services .col.services-courier {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+  -ms-flex-order: 2;
+      order: 2;
 }
 
 .applying-services .col.services-restaurants {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+  -ms-flex-order: 3;
+      order: 3;
 }
 
 .applying-services .col.services-bars {
   -ms-flex-preferred-size: 17%;
       flex-basis: 17%;
+  -ms-flex-order: 4;
+      order: 4;
 }
 
 .applying-services .col.services-cafe {
   -ms-flex-preferred-size: 12%;
       flex-basis: 12%;
+  -ms-flex-order: 5;
+      order: 5;
 }
 
 .applying-services .col.services-beauty {
   -ms-flex-preferred-size: 44%;
       flex-basis: 44%;
+  -ms-flex-order: 6;
+      order: 6;
 }
 
 .applying-services .col.services-services {
   -ms-flex-preferred-size: 44%;
       flex-basis: 44%;
+  -ms-flex-order: 7;
+      order: 7;
+}
+
+.applying-services h3 {
+  margin-bottom: 2.5rem;
 }
 
 .services-card {
@@ -767,6 +847,138 @@ a:hover {
   border-radius: 1.25rem;
 }
 
+.faqs {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.faqs .faqs-title {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.faqs .accordion-item {
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid #D8E4FF;
+  border-bottom: 1px solid #D8E4FF;
+}
+
+.faqs .accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+
+.faqs .accordion-item:first-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.faqs .accordion-item:last-of-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.faqs .accordion-button {
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  color: #0C0C0C;
+}
+
+.faqs .accordion-button::after {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.625rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.22192 12.9858L16.0001 20.764' stroke='%238D99AE' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 20.7646L23.7781 12.9865' stroke='%238D99AE' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-size: 2rem;
+}
+
+.faqs .accordion-button:focus {
+  border-color: #D8E4FF;
+  box-shadow: none;
+}
+
+.faqs .accordion-button:not(.collapsed) {
+  font-weight: 900;
+  box-shadow: none;
+  background-color: #FFFFFF;
+}
+
+.faqs .accordion-button:not(.collapsed)::after {
+  background-color: #F8F7FF;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.22192 12.9858L16.0001 20.764' stroke='%230C0C0C' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 20.7646L23.7781 12.9865' stroke='%230C0C0C' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.faqs .accordion-body {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.223;
+  border-radius: 1.25rem;
+  background-color: #F8F7FF;
+}
+
+.contacts {
+  padding-bottom: 7.5rem;
+}
+
+.contacts-card {
+  max-width: 43.75rem;
+  margin: 0 auto;
+  padding: 5rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  background-color: #F8F7FF;
+}
+
+.contacts-card h2 {
+  margin-bottom: 1.875rem;
+}
+
+.contacts-card .btn-main {
+  width: 100%;
+  margin-bottom: 1.875rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.contacts-card .contacts-link {
+  margin-bottom: 1.875rem;
+}
+
+.contacts-card .contacts-link a {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.footer {
+  margin-top: -7.5rem;
+  padding-top: 10rem;
+  padding-bottom: 1.25rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  background-color: #0C0C0C;
+}
+
+.footer p, .footer a {
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+.footer .footer-copyright {
+  margin-top: 2.5rem;
+}
+
+.footer .footer-copyright p {
+  margin-bottom: 0;
+  color: #8D99AE;
+  text-align: center;
+}
+
 @media screen and (max-width: 1199px) {
   .header {
     background: radial-gradient(circle at 50% 126px, transparent 0, transparent 762px, #F6E71D 763px, transparent 764px), radial-gradient(circle at 50% -172px, transparent 0, transparent 846px, #F6E71D 847px, transparent 848px);
@@ -774,9 +986,22 @@ a:hover {
   .top-main {
     padding-top: 6.25rem;
   }
+  .applying-card {
+    height: 8.75rem;
+  }
+  .applying-card--ukrnafta img:not(.applying-icon) {
+    width: 412px;
+  }
+  .applying-card--okko img:not(.applying-icon) {
+    width: 214px;
+  }
 }
 
 @media screen and (max-width: 991px) {
+  .main {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
   .header {
     background: radial-gradient(circle at 50% 100px, transparent 0, transparent 508px, #F6E71D 509px, transparent 510px), radial-gradient(circle at 50% -94px, transparent 0, transparent 564px, #F6E71D 565px, transparent 566px);
   }
@@ -817,9 +1042,71 @@ a:hover {
   .advantage-card {
     min-height: auto;
   }
+  .applying .applying-icon--beauty, .applying .applying-icon--services {
+    display: none;
+  }
+  .applying-current {
+    padding-bottom: 1.25rem;
+  }
+  .applying-card--okko {
+    margin-top: 1.875rem;
+  }
+  .applying-services .col.services-azk {
+    -ms-flex-preferred-size: 16%;
+        flex-basis: 16%;
+  }
+  .applying-services .col.services-courier {
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+  .applying-services .col.services-restaurants {
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+  .applying-services .col.services-bars {
+    -ms-flex-preferred-size: 27%;
+        flex-basis: 27%;
+  }
+  .applying-services .col.services-cafe {
+    -ms-flex-preferred-size: 19%;
+        flex-basis: 19%;
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .applying-services .col.services-beauty {
+    -ms-flex-preferred-size: 54%;
+        flex-basis: 54%;
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .applying-services .col.services-services {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .faqs {
+    padding-top: 3rem;
+  }
+  .contacts {
+    padding-bottom: 3rem;
+  }
+  .contacts-card {
+    max-width: 33.125rem;
+    padding: 2.5rem;
+  }
+  .footer {
+    margin-top: -3rem;
+    padding-top: 4.25rem;
+  }
+  .footer .footer-row-first {
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .main {
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+  }
   .header {
     padding-bottom: 3.75rem;
     background: none;
@@ -892,6 +1179,96 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+  .applying {
+    padding-top: 1.875rem;
+    padding-bottom: 1.5rem;
+  }
+  .applying .applying-icon--ukrnafta {
+    display: none;
+  }
+  .applying .applying-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+  .applying-current {
+    padding-bottom: 1.5rem;
+  }
+  .applying-services .col.services-azk {
+    -ms-flex-preferred-size: 29%;
+        flex-basis: 29%;
+  }
+  .applying-services .col.services-courier {
+    -ms-flex-preferred-size: 71%;
+        flex-basis: 71%;
+  }
+  .applying-services .col.services-restaurants {
+    -ms-flex-preferred-size: 58%;
+        flex-basis: 58%;
+  }
+  .applying-services .col.services-bars {
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+  .applying-services .col.services-cafe {
+    -ms-flex-preferred-size: 39%;
+        flex-basis: 39%;
+    -ms-flex-order: 5;
+        order: 5;
+  }
+  .applying-services .col.services-beauty {
+    -ms-flex-preferred-size: 61%;
+        flex-basis: 61%;
+    -ms-flex-order: 6;
+        order: 6;
+  }
+  .applying-services h3 {
+    margin-bottom: 1.5rem;
+  }
+  .faqs {
+    padding-top: 1rem;
+    padding-bottom: 3.75rem;
+  }
+  .faqs .faqs-title {
+    margin-bottom: 1.25rem;
+  }
+  .faqs .accordion-button {
+    padding: 1.25rem 0;
+    font-size: 1.25rem;
+  }
+  .faqs .accordion-body {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+  .contacts {
+    padding-bottom: 5rem;
+  }
+  .contacts-card {
+    padding: 1.25rem;
+  }
+  .contacts-card h2 {
+    margin-bottom: 1rem;
+  }
+  .contacts-card .btn-main {
+    margin-bottom: 1rem;
+  }
+  .contacts-card .contacts-link a {
+    font-size: 1.5rem;
+  }
+  .contacts-card .contacts-link ~ img {
+    width: 80px;
+  }
+  .footer {
+    margin-top: -2.5rem;
+    padding-top: 4.6875rem;
+    text-align: center;
+  }
+  .footer .footer-logo {
+    width: 142px;
+  }
+  .footer .footer-row-first,
+  .footer .footer-row-second {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -919,6 +1296,18 @@ a:hover {
   }
   .list-item--reviews img {
     width: 50%;
+  }
+  .applying-card {
+    height: 6.25rem;
+  }
+  .applying-card--ukrnafta img:not(.applying-icon) {
+    width: 240px;
+  }
+  .applying-card--okko {
+    margin-top: 1.25rem;
+  }
+  .applying-card--okko img:not(.applying-icon) {
+    width: 180px;
   }
 }
 /*# sourceMappingURL=custom.css.map */

@@ -28,6 +28,32 @@
   }
 }
 
+.form-control {
+  padding: 1.125rem 0.75rem;
+  font-size: 1.25rem;
+  color: $black;
+  text-align: center;
+  border: 3px solid $light-grey;
+  border-radius: 1.25rem;
+
+  &:focus {
+    color: $black;
+    border-color: $light-grey;
+    box-shadow: none;
+  }
+
+  &.is-invalid {
+    border-color: $pink;
+    background-image: none;
+  }
+
+  & ~ .invalid-feedback {
+    margin-top: 0.625rem;
+    color: $pink;
+    font-size: 1.25rem;
+  }
+}
+
 .circle {
   position: absolute;
   border-radius: 50%;
