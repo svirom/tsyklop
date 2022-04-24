@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.min.css">
+
+    <title>Review Testimonial 2</title>
+  </head>
+  <body>
+    
+    <div class="wrapper review-wrapper">
+  
+      <main class="review-main">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col">
+
+              <div class="review-header">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col-auto">
+                    <a href="#" class="btn btn-back">Назад</a>
+                  </div>
+                  <div class="col-auto">
+                    <div class="nav-lang-mobile dropdown">
+                      <a class="btn btn-lang btn-item" href="#" role="button" id="dropdownLangMobile" data-bs-toggle="dropdown" aria-expanded="false">
+                        RU
+                      </a>
+                    
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLangMobile">
+                        <li><a class="dropdown-item btn-item active" href="#">Українська</a></li>
+                        <li><a class="dropdown-item btn-item" href="#">Русский</a></li>
+                        <li><a class="dropdown-item btn-item" href="#">English</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /.review-header -->
+
+              <div class="review-top review-top--tips border-dashed">
+                <div class="review-top__logo">
+                  <img src="img/logo-example.svg" alt="Logo" style="width: 64px;">
+                </div>
+                <h3 class="review-top__company">Название компании</h3>
+                <p class="review-top__address mb-0">м. Киев, Оболонский проспект 16В</p>
+              </div><!-- /.review-top -->
+
+              <div class="review-service border-dashed">
+                <h3 class="review-service__title">Оцените сервис</h3>
+                <ul class="review-list">
+                  <li class="review-item review-item--1" data-value="1"></li>
+                  <li class="review-item review-item--2" data-value="2"></li>
+                  <li class="review-item review-item--3 active" data-value="3"></li>
+                  <li class="review-item review-item--4" data-value="4"></li>
+                  <li class="review-item review-item--5" data-value="5"></li>
+                </ul>
+                <input type="hidden" name="" class="form-question" value="3">
+                <p class="review-service__rating mb-0" data-value-1="Ужас" data-value-2="Плохо" data-value-3="Средненько" data-value-4="Хорошо" data-value-5="Великолепно!">Средненько</p>
+              </div>
+
+              <div class="review-service border-dashed">
+                <h3 class="review-service__title">Как вы оцените чистоту заведения?</h3>
+                <ul class="review-list">
+                  <li class="review-item review-item--1" data-value="1"></li>
+                  <li class="review-item review-item--2" data-value="2"></li>
+                  <li class="review-item review-item--3 active" data-value="3"></li>
+                  <li class="review-item review-item--4" data-value="4"></li>
+                  <li class="review-item review-item--5" data-value="5"></li>
+                </ul>
+                <input type="hidden" name="" class="form-question" value="3">
+                <p class="review-service__rating mb-0" data-value-1="Ужас" data-value-2="Плохо" data-value-3="Средненько" data-value-4="Хорошо" data-value-5="Великолепно!">Средненько</p>
+              </div>
+
+              <div class="review-service border-dashed">
+                <h3 class="review-service__title">Как вам ассортимет меню?</h3>
+                <ul class="review-list">
+                  <li class="review-item review-item--1" data-value="1"></li>
+                  <li class="review-item review-item--2" data-value="2"></li>
+                  <li class="review-item review-item--3 active" data-value="3"></li>
+                  <li class="review-item review-item--4" data-value="4"></li>
+                  <li class="review-item review-item--5" data-value="5"></li>
+                </ul>
+                <input type="hidden" name="" class="form-question" value="3">
+                <p class="review-service__rating mb-0" data-value-1="Ужас" data-value-2="Плохо" data-value-3="Средненько" data-value-4="Хорошо" data-value-5="Великолепно!">Средненько</p>
+              </div>
+
+              <div class="review-form">
+                <form action="">
+                  <div class="form-group form-group--review">
+                    <label for="exampleFormControlInput1" class="form-label">Оставить отзыв</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Напишите сюда ваш отзыв">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2" class="form-label">Ваш телефон (необязательно)</label>
+                    <input type="tel" class="form-control is-invalid" id="exampleFormControlInput2" placeholder="+380 00 000 00 00" value="+380 36 034 67 78">
+                    <div class="invalid-feedback">Упс! Телефон введен неверно</div>
+                  </div>
+                  <p class="review-form__help">Оставьте ваш телефон, чтобы могли с вами связаться если у вас возникла проблема.</p>
+                  <div class="form-group review-form__upload">
+                    <label for="review-load_file" class="btn btn-upload">
+                      <span class="btn-upload__img"></span>
+                      <span>Прикрепить файл</span>
+                    </label>
+                    <input id="review-load_file" type="file">
+                    <p class="load-file-name mb-0"></p>
+                  </div>
+                  <div class="form-submit">
+                    <button type="submit" class="btn btn-main">Оставить отзыв</button>
+                  </div>
+                </form>
+              </div><!-- /.review-form -->
+              
+            </div>
+
+          </div>
+        </div>
+        
+      </main><!-- /.review-main -->
+  
+      <footer class="review-footer">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col">
+              <div class="review-footer__wrapper">
+                <div class="footer-logo">
+                  <img src="img/review/tsyklop-review.png" srcset="img/review/tsyklop-review.png 1x, img/review/tsyklop-review@2x.png 2x" alt="Tsyklop">
+                </div>
+                <p>Сервис мгновенных отзывов и чаевых</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer><!-- /.review-footer -->
+  
+    </div><!-- /.wrapper -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+    
+  </body>
+</html>

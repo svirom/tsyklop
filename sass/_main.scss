@@ -94,12 +94,10 @@
 }
 
 .nav-lang-mobile {
-	display: none;
 	margin-right: 0.9375rem;
 
-	.btn-lang {
+	.btn-item {
 		position: relative;
-		padding-left: 0.875rem;
 
 		&::after {
 			position: absolute;
@@ -110,13 +108,34 @@
 			width: 0.625rem;
 			height: 0.625rem;
 			border-radius: 50%;
-			background-color: $yellow;
+			background-color: $review-light-grey;
 		}
+
+		&.btn-lang, &.dropdown-item:hover, &.dropdown-item.active {
+			&::after {
+				background-color: $yellow;
+			}
+		}
+
+		&.dropdown-item {
+			&::after {
+				left: 0.625rem;
+			}
+		}
+	}
+
+	.btn-lang {
+		padding-left: 0.875rem;
 	}
 
 	.dropdown-menu {
 		min-width: auto;
-		// padding: 0.25rem 0;
+		width: 200px;
+		padding: 0.5rem;
+		border: 0;
+		border-radius: 0.625rem;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+		background-color: $white;
 
 		li {
 			margin-bottom: 0;
@@ -124,12 +143,17 @@
 	}
 
 	.dropdown-item {
-		padding: 0.25rem 0.5rem;
+		padding: 0.625rem 0 0.625rem 1.5rem;
 		color: $black;
 		font-size: 1rem;
+		font-weight: 700;
+		border-radius: 0.625rem;
 
 		&.active {
-			font-weight: 700;
+			background-color: $review-light-grey;
+		}
+
+		&:not(.active):hover {
 			background-color: transparent;
 		}
 	}
@@ -692,14 +716,6 @@
 	.header {
 		padding-bottom: 3.75rem;
 		background: none;
-	}
-
-	.nav-lang {
-		display: none;
-	}
-
-	.nav-lang-mobile {
-		display: block;
 	}
 
 	.header-navbar {

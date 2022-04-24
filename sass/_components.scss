@@ -14,9 +14,35 @@
   }
 
   &.btn-lang {
+    display: block;
     padding: 0;
     font-size: 1rem;
     line-height: 1.1875;
+  }
+
+  &.btn-back {
+    padding-left: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.1619 8.22192L11.3837 16.0001' stroke='%230C0C0C' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.3835 16.0001L19.1617 23.7783' stroke='%230C0C0C' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left center no-repeat;
+  }
+
+  &.btn-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    border: 3px solid $review-grey;
+    border-radius: 0.625rem;
+
+    .btn-upload__img {
+      flex: 0 0 2.125rem;
+      max-width: 2.125rem;
+      height: 2.125rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+      background: $yellow url("data:image/svg+xml,%3Csvg width='25' height='22' viewBox='0 0 25 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.16565 14.6596L13.9156 6.91962C14.4051 6.43048 15.0687 6.1557 15.7607 6.1557C16.4526 6.1557 17.1162 6.43048 17.6057 6.91962V6.91962C17.8475 7.16111 18.0395 7.44788 18.1704 7.76361C18.3013 8.07934 18.3687 8.41778 18.3687 8.75958C18.3687 9.10138 18.3013 9.43983 18.1704 9.75555C18.0395 10.0713 17.8475 10.3581 17.6057 10.5996L9.11566 19.0796C8.33182 19.8631 7.2689 20.3032 6.16064 20.3032C5.05239 20.3032 3.98953 19.8631 3.20569 19.0796V19.0796C2.81806 18.6923 2.51052 18.2324 2.30072 17.7263C2.09092 17.2201 1.98291 16.6775 1.98291 16.1296C1.98291 15.5816 2.09092 15.0391 2.30072 14.5329C2.51052 14.0267 2.81806 13.5668 3.20569 13.1796L13.2057 3.17957C14.2852 2.1042 15.7469 1.50043 17.2707 1.50043C18.7945 1.50043 20.2561 2.1042 21.3357 3.17957V3.17957C21.8688 3.71177 22.2917 4.34387 22.5802 5.03967C22.8687 5.73547 23.0172 6.48136 23.0172 7.23462C23.0172 7.98787 22.8687 8.7337 22.5802 9.4295C22.2917 10.1253 21.8688 10.7574 21.3357 11.2896L12.0956 20.4996' stroke='%230C0C0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center no-repeat;
+    }
   }
 
   &:focus {
