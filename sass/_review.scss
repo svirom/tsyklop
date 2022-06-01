@@ -166,6 +166,18 @@
       margin-top: 1.25rem;
       margin-bottom: 1.25rem;
     }
+
+    &.has-error {
+      .form-control {
+        background-color: #F8EFEF;
+
+        & ~ .help-block-error {
+          margin-top: 0.25rem;
+          color: #FF4141;
+          font-size: 0.875rem;
+        }
+      }
+    }
   }
 
   .form-label {
@@ -195,7 +207,8 @@
     }
   }
 
-  input::placeholder {
+  input::placeholder,
+  textarea::placeholder {
     color: $review-placeholder;
     font-weight: 400;
   }

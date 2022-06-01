@@ -80,6 +80,19 @@
   }
 }
 
+.has-error {
+  .form-control {
+    border-color: $pink;
+    background-image: none;
+
+    & ~ .help-block-error {
+      margin-top: 0.625rem;
+      color: $pink;
+      font-size: 1.25rem;
+    }
+  }
+}
+
 .circle {
   position: absolute;
   border-radius: 50%;

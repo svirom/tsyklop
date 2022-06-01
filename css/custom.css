@@ -243,6 +243,17 @@ a:hover {
   font-size: 1.25rem;
 }
 
+.has-error .form-control {
+  border-color: #ED6B86;
+  background-image: none;
+}
+
+.has-error .form-control ~ .help-block-error {
+  margin-top: 0.625rem;
+  color: #ED6B86;
+  font-size: 1.25rem;
+}
+
 .circle {
   position: absolute;
   border-radius: 50%;
@@ -1520,6 +1531,16 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
+.review-form .form-group.has-error .form-control {
+  background-color: #F8EFEF;
+}
+
+.review-form .form-group.has-error .form-control ~ .help-block-error {
+  margin-top: 0.25rem;
+  color: #FF4141;
+  font-size: 0.875rem;
+}
+
 .review-form .form-label {
   margin-bottom: 0.25rem;
   font-size: 0.875rem;
@@ -1547,17 +1568,20 @@ a:hover {
   font-size: 0.875rem;
 }
 
-.review-form input::-webkit-input-placeholder {
+.review-form input::-webkit-input-placeholder,
+.review-form textarea::-webkit-input-placeholder {
   color: #AEAEAE;
   font-weight: 400;
 }
 
-.review-form input::-ms-input-placeholder {
+.review-form input::-ms-input-placeholder,
+.review-form textarea::-ms-input-placeholder {
   color: #AEAEAE;
   font-weight: 400;
 }
 
-.review-form input::placeholder {
+.review-form input::placeholder,
+.review-form textarea::placeholder {
   color: #AEAEAE;
   font-weight: 400;
 }
