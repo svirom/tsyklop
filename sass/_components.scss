@@ -173,24 +173,28 @@
     left: calc(50% - 700px);
     top: 173px;
     background: $white url('../img/icons/icon-package.png') center no-repeat;
+    animation: heroIcon1 8s ease-in-out infinite;
   }
 
   &.top-icon-2 {
     right: calc(50% - 684px);
     top: 139px;
     background: $white url('../img/icons/icon-cocktail-glass.png') center no-repeat;
+    animation: heroIcon2 8s ease-in-out infinite;
   }
 
   &.top-icon-3 {
     left: calc(50% - 606px);
     top: 519px;
     background: $white url('../img/icons/icon-thumbs-up-2.png') center no-repeat;
+    animation: heroIcon3 8s ease-in-out infinite;
   }
 
   &.top-icon-4 {
     right: calc(50% - 676px);
     top: 449px;
     background: $white url('../img/icons/icon-credit-card.png') center no-repeat;
+    animation: heroIcon4 8s ease-in-out infinite;
   }
 }
 

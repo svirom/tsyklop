@@ -1,0 +1,95 @@
+@keyframes heroTsyklop {
+	0% {
+		transform: translateY(15px);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(15px);
+	}
+}
+
+@keyframes heroIcon1 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(0, 0) rotate(0);
+  }
+  45% {
+    transform: translate(-15px, -15px) rotate(30deg);
+  }
+  55% {
+    transform: translate(-15px, -15px) rotate(30deg);
+  }
+  90% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes heroIcon2 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(0, 0) rotate(0);
+  }
+  45% {
+    transform: translate(-10px, 15px) rotate(45deg);
+  }
+  55% {
+    transform: translate(-10px, 15px) rotate(45deg);
+  }
+  90% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes heroIcon3 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(0, 0) rotate(0);
+  }
+  45% {
+    transform: translate(50px, 80px) rotate(60deg);
+  }
+  55% {
+    transform: translate(50px, 80px) rotate(60deg);
+  }
+  90% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes heroIcon4 {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(0, 0) rotate(0);
+  }
+  45% {
+    transform: translate(75px, -100px) rotate(-30deg);
+  }
+  55% {
+    transform: translate(75px, -100px) rotate(-30deg);
+  }
+  90% {
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}

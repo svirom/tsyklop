@@ -32,6 +32,11 @@
 		font-size: 2.5rem;
 		line-height: 1.2;
 	}
+
+	& > img {
+		transform: translateY(15px);
+		animation: heroTsyklop 4s ease-in-out infinite;
+	}
 }
 
 // header
