@@ -1091,6 +1091,9 @@ a:hover {
   .top-main img {
     width: 200px;
   }
+  .top-main .img-animate lottie-player {
+    width: 200px !important;
+  }
   .top-promo .top-promo__subtitle {
     margin-bottom: 1.25rem;
     font-size: 1.125rem;
