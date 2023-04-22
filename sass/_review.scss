@@ -256,6 +256,18 @@
       font-size: 0.75rem;
     }
   }
+
+  &__oferta {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    text-align: center;
+
+    a {
+      @extend .review-form__oferta;
+      color: $pink;
+    }
+  }
 }
 
 .review-service {
