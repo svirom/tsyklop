@@ -348,8 +348,13 @@
 	justify-content: center;
 	align-items: center;
 	height: 12.5rem;
+	padding: 1rem;
 	border: 2px solid $light-grey;
 	border-radius: 1.25rem;
+
+	img {
+		max-height: 100%;
+	}
 }
 
 .applying-services {
@@ -654,8 +659,16 @@
 	}
 
 	.applying-card {
-		&--okko {
+		&--okko, &--turboua, &--apteka911 {
 			margin-top: 1.875rem;
+		}
+
+		&--apteka911 {
+			img {
+				&:not(.applying-icon) {
+					width: 300px;
+				}
+			}
 		}
 	}
 
@@ -970,7 +983,7 @@
 			}
 		}
 
-		&--okko {
+		&--okko, &--turboua, &--apteka911 {
 			margin-top: 1.25rem;
 
 			img {
@@ -978,6 +991,15 @@
 					width: 180px;
 				}
 			}
+		}
+
+		&--apteka911 {
+			img {
+				&:not(.applying-icon) {
+					width: 212px;
+				}
+			}
+
 		}
 	}
 }

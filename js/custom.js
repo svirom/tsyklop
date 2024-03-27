@@ -12,8 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
   btnTips.forEach(function(btnTip) {
     btnTip.addEventListener('click', function() {
       const tipAmount = this.getAttribute('data-amount');
-      
-      amountInput.value = tipAmount;
+
+      if (tipAmount === '+') {
+        let inputAddition = this.closest('.review-form--couple').querySelector('.review-form .form-control-amount');
+        inputAddition.value = Number(inputAddition.value) + 10;
+      } else if (tipAmount === '-') {
+        let inputSubtraction = this.closest('.review-form--couple').querySelector('.review-form .form-control-amount');
+        inputSubtraction.value >= 10 ? inputSubtraction.value = Number(inputSubtraction.value) - 10 : '';
+      } else {
+        amountInput.value = tipAmount;
+      }
     })
   })
 
@@ -57,8 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // file upload
-  fileUpload.addEventListener('change', function() {
-    loadFileName.innerText = fileUpload.files[0].name;
-  })
+  if (fileUpload) {
+    fileUpload.addEventListener('change', function() {
+      loadFileName.innerText = fileUpload.files[0].name;
+    })
+  }
 
 })
